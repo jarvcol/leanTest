@@ -18,6 +18,12 @@ public class HomePage extends BasePage{
     @FindBy(css=".login")
     private WebElement loginButton;
 
+    @FindBy(id="search_query_top")
+    private WebElement searchInputBox;
+
+    @FindBy(css="button[name=submit_search]")
+    private WebElement searchButton;
+
     public void goToHomePage(){
         super.NavigateTo(UrlSetUp.getUrl()+"/index.php");
     }
@@ -25,6 +31,17 @@ public class HomePage extends BasePage{
     public void clickOnLoginButton(){
         getWait().until(ExpectedConditions.visibilityOf(loginButton));
         loginButton.click();
+    }
+
+    public void writeToSearchInputBox(String searchTerm){
+        getWait().until(ExpectedConditions.visibilityOf(searchInputBox));
+        searchInputBox.clear();
+        searchInputBox.sendKeys(searchTerm);
+    }
+
+    public void clickOnSearchButton(){
+        getWait().until(ExpectedConditions.visibilityOf(searchButton));
+        searchButton.click();
     }
 
 }
