@@ -18,4 +18,4 @@ workflows:
 
   build-then-test:
     jobs:
-      - test:
+      - test
