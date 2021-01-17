@@ -1,8 +1,8 @@
 package bitpanda.stepDefinitios;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
-import pageObjects.LoginPage;
 import pageObjects.MyAccountPage;
 import util.TestContext;
 
@@ -20,5 +20,4 @@ public class MyAccountSteps {
     public void userLandsOnMyAccountPage() {
         Assert.assertTrue("User is not at My Account Page", myAccountPage.userIsAtMyAccountPage());
     }
-
 }

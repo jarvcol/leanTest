@@ -2,7 +2,7 @@ Feature: LoginAndSingUp feature
 
   As Bitpanda client
   I want to be able to get Sign in or Sign up
-  So that I can buy stuff in
+  So that I can register, buy stuff or manage my account
 
   Scenario: User lands on Sign up page when clicking on login button
     Given User enters the site home page
