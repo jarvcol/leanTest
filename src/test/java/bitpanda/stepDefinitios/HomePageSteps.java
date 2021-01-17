@@ -25,4 +25,5 @@ public class HomePageSteps {
     public void userGetsTheFinancialOverviewInformation() {
         homePage.clickOnLoginButton();
     }
+
 }
