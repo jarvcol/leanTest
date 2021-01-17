@@ -21,7 +21,7 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run: ./mvnw clean compile
+      - run: ./mvnw clean
 
 workflows:
   version: 2
