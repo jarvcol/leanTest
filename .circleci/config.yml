@@ -21,7 +21,7 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run: ./mvnw -Dmaven.test.skip=true package
+      - run: ./mvnw clean compile
 
 workflows:
   version: 2
