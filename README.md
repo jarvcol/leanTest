@@ -34,5 +34,6 @@ There are multiple reports but best one should be located in ..target/cucumber-r
 
 ![Report example 2](https://github.com/jarvcol/bitPanda/blob/addImagesReadMe/reportImg/cucumberReport.png)
 
+
 Regards.
 
