@@ -1,4 +1,4 @@
-package bitpanda;
+package leanTech;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;

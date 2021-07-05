@@ -15,17 +15,17 @@ public class HomePage extends BasePage{
     }
 
     //Page Elements
-    @FindBy(css=".login")
+    @FindBy(id="login-button")
     private WebElement loginButton;
 
-    @FindBy(id="search_query_top")
-    private WebElement searchInputBox;
+    @FindBy(id="user-name")
+    private WebElement userNameInput;
 
-    @FindBy(css="button[name=submit_search]")
-    private WebElement searchButton;
+    @FindBy(id="password")
+    private WebElement passwordInput;
 
     public void goToHomePage(){
-        super.NavigateTo(UrlSetUp.getUrl()+"/index.php");
+        super.NavigateTo(UrlSetUp.getUrl());
     }
 
     public void clickOnLoginButton(){
@@ -33,15 +33,22 @@ public class HomePage extends BasePage{
         loginButton.click();
     }
 
-    public void writeToSearchInputBox(String searchTerm){
-        getWait().until(ExpectedConditions.visibilityOf(searchInputBox));
-        searchInputBox.clear();
-        searchInputBox.sendKeys(searchTerm);
+    public void writeToUserNameInput(String userName){
+        getWait().until(ExpectedConditions.visibilityOf(userNameInput));
+        userNameInput.clear();
+        userNameInput.sendKeys(userName);
     }
 
-    public void clickOnSearchButton(){
-        getWait().until(ExpectedConditions.visibilityOf(searchButton));
-        searchButton.click();
+    public void writeToPasswordInput(String userPassword){
+        getWait().until(ExpectedConditions.visibilityOf(passwordInput));
+        passwordInput.clear();
+        passwordInput.sendKeys(userPassword);
+    }
+
+    public void performLogin(String userName, String userPassword){
+        writeToUserNameInput(userName);
+        writeToPasswordInput(userPassword);
+        clickOnLoginButton();
     }
 
 }

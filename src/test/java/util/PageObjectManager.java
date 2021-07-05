@@ -1,22 +1,22 @@
 package util;
 
 import org.openqa.selenium.WebDriver;
+import pageObjects.checkoutPages.CheckOutConfirmationPage;
+import pageObjects.checkoutPages.CheckOutInfoPage;
 import pageObjects.HomePage;
-import pageObjects.LoginPage;
-import pageObjects.MyAccountPage;
-import pageObjects.ShoppingSummaryPage;
-import pageObjects.searchpages.SearchMainPage;
-import pageObjects.searchpages.SearchToolsPage;
+import pageObjects.ProductsPage;
+import pageObjects.CartPage;
+import pageObjects.checkoutPages.CheckOutOverviewPage;
 
 public class PageObjectManager {
     private WebDriver driver;
 
     private HomePage homePage;
-    private LoginPage loginPage;
-    private MyAccountPage myAccountPage;
-    private SearchMainPage searchMainPage;
-    private SearchToolsPage searchToolsPage;
-    private ShoppingSummaryPage shoppingSummaryPage;
+    private ProductsPage productsPage;
+    private CheckOutInfoPage checkOutInfoPage;
+    private CartPage cartPage;
+    private CheckOutOverviewPage checkOutOverviewPage;
+    private CheckOutConfirmationPage checkOutConfirmationPage;
 
     public PageObjectManager(WebDriver driver) {
         this.driver = driver;
@@ -26,23 +26,23 @@ public class PageObjectManager {
         return (homePage == null) ? homePage = new HomePage(driver) : homePage;
     }
 
-    public LoginPage getLoginPage() {
-        return (loginPage == null) ? loginPage = new LoginPage(driver) : loginPage;
+    public ProductsPage getProductsPage() {
+        return (productsPage == null) ? productsPage = new ProductsPage(driver) : productsPage;
     }
 
-    public MyAccountPage getMyAccountPage() {
-        return (myAccountPage == null) ? myAccountPage = new MyAccountPage(driver) : myAccountPage;
+    public CheckOutInfoPage getCheckOutInfoPage() {
+        return (checkOutInfoPage == null) ? checkOutInfoPage = new CheckOutInfoPage(driver) : checkOutInfoPage;
     }
 
-    public SearchMainPage getSearchMainPage() {
-        return (searchMainPage == null) ? searchMainPage = new SearchMainPage(driver, this) : searchMainPage;
+    public CheckOutOverviewPage getCheckOutOverviewPage() {
+        return (checkOutOverviewPage == null) ? checkOutOverviewPage = new CheckOutOverviewPage(driver) : checkOutOverviewPage;
     }
 
-    public SearchToolsPage getSearchToolsPage() {
-        return (searchToolsPage == null) ? searchToolsPage = new SearchToolsPage(driver) : searchToolsPage;
+    public CheckOutConfirmationPage getCheckOutConfirmationPage() {
+        return (checkOutConfirmationPage == null) ? checkOutConfirmationPage = new CheckOutConfirmationPage(driver) : checkOutConfirmationPage;
     }
 
-    public ShoppingSummaryPage getShoppingSummaryPage() {
-        return (shoppingSummaryPage == null) ? shoppingSummaryPage = new ShoppingSummaryPage(driver) : shoppingSummaryPage;
+    public CartPage getCartPagePage() {
+        return (cartPage == null) ? cartPage = new CartPage(driver) : cartPage;
     }
 }
