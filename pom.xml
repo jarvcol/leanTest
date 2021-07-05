@@ -95,7 +95,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>bitpanda</projectName>
+                            <projectName>leanTechTest</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                         </configuration>
