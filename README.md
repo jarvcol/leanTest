@@ -1,4 +1,4 @@
-# BitPandaTest
+# LeanTechTest
 
 Hello!!
 
@@ -11,14 +11,14 @@ Project is made basically using:
   - Selenium
   - Maven
 
-There are three features:
-  - LoginAndSingUp.feature : It is testing the sign in and sign up functionality
-  - SearchProducts.feature : It is testing the search of products functionality
+There is one feature:
+  - Saucedemo.feature : It is testing the required functionalities for the challenge. The commented scenarios are 
+    part of the requirement but are not automated.
 
 There is a file called Configuration.properties in the resources directory. In this file it can be configured:
   - Web browser for the test
   - Default time out time
-  - Test environment (currently only one PROD is configured)
+  - Test environment (currently only one called PROD is configured)
   - URL for each environment
 
 Depending on the IDE used and the plugins the project can be run either:
@@ -30,9 +30,7 @@ Depending on the IDE used and the plugins the project can be run either:
 
 Reports can be found in the target folder once executed (depending on the way you execute the test different reports may appear). 
 There are multiple reports but best one should be located in ..target/cucumber-report-html/cucumber-html-reports
-![Report example 1](https://github.com/jarvcol/bitPanda/blob/addImagesReadMe/reportImg/consoleOutput.png)
 
-![Report example 2](https://github.com/jarvcol/bitPanda/blob/addImagesReadMe/reportImg/cucumberReport.png)
 
 
 Regards.

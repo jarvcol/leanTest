@@ -1,4 +1,4 @@
-package leanTech.stepDefinitios;
+package leanTechTest.stepDefinitios;
 
 
 import cucumber.api.java.en.Given;

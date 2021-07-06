@@ -1,4 +1,4 @@
-package leanTech;
+package leanTechTest;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
